@@ -1,6 +1,7 @@
 //imr import React from 'react';
 //imrd import ReactDOM from 'react-dom';
 //17. dakikada kaldım
+//37.58de kaldım
 
 import React from 'react';
 import { CssBaseline,Grid } from '@material-ui/core'; //CssBaseline padding margin, bgcolor düzenleyip normale çekiyor
