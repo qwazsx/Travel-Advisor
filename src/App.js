@@ -16,10 +16,12 @@ const App = () => {
     const [places, setPlaces] = useState([]);
 
     const [coordinates, setCoordinates] = useState({});
-    const [bounds, setBounds] = useState(null);
+    const [bounds, setBounds] = useState({});
+    // useState içerisine null yerine {} geçtim, çünkü hata vermeyip beyaz ekranda bırakıyordu ref stackoverflow
 
     useEffect(() => {
         navigator.geolocation.getCurrentPosition(({ coords: { latitude, longitude } }) => {
+            //console.log(latitude,longitude);
             setCoordinates({ lat: latitude, lng: longitude });
         })
     }, []);// boş array olunca sadece ilk yüklemede çalışıyor. ilk yüklediğimizde kendi lokasyonumuzu alsın diye kullandık
@@ -29,7 +31,6 @@ const App = () => {
 
         getPlacesData(bounds.sw, bounds.ne)
             .then((data) => {
-                console.log(data);
                 setPlaces(data);
             })
     }, [coordinates, bounds]);
@@ -43,7 +44,7 @@ const App = () => {
                 {/* xs=12 ile mobil cihazlarda full ekran görüntülenecek demiş olduk */}
                 {/* md=4 ile daha büyük cihazlarda görüntülenecek alanı belirttik */}
                 <Grid item xs={12} md={4}>
-                    <List />
+                    <List places={places}/>
                 </Grid>
                 <Grid item xs={12} md={8}>
                     <Map
