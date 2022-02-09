@@ -2,6 +2,7 @@
 //imrd import ReactDOM from 'react-dom';
 //17. dakikada kaldım
 //37.58de kaldım
+//1:14:18 de kaldım
 
 import React, { useState, useEffect } from 'react';
 import { CssBaseline, Grid } from '@material-ui/core'; //CssBaseline padding margin, bgcolor düzenleyip normale çekiyor
@@ -51,6 +52,7 @@ const App = () => {
                         setCoordinates={setCoordinates}
                         setBounds={setBounds}
                         coordinates={coordinates}
+                        places={places}
                     />
                 </Grid>
             </Grid>
