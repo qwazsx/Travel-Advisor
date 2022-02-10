@@ -1,5 +1,7 @@
 //imr import React from 'react';
 //imrd import ReactDOM from 'react-dom';
+// imrs→	import React, { useState } from 'react'
+// imrse→	import React, { useState, useEffect } from 'react'
 //17. dakikada kaldım
 //37.58de kaldım
 //1:14:18 de kaldım
@@ -41,20 +43,22 @@ const App = () => {
     }, [rating])
 
     useEffect(() => {
-        // console.log(coordinates,bounds); bununla başta görebilcek mi kendi lokasyonumuzu diye baktık
-        setIsLoading(true);
-        getPlacesData(type, bounds.sw, bounds.ne)
-            .then((data) => {
-                setPlaces(data);
-                setFilteredPlaces([]);
-                setIsLoading(false);
-            })
-    }, [type, coordinates, bounds]);
+        if (bounds.sw && bounds.ne) {
+            // console.log(coordinates,bounds); bununla başta görebilcek mi kendi lokasyonumuzu diye baktık
+            setIsLoading(true);
+            getPlacesData(type, bounds.sw, bounds.ne)
+                .then((data) => {
+                    setPlaces(data?.filter((place) => place.name && place.num_reviews > 0));
+                    setFilteredPlaces([]);
+                    setIsLoading(false);
+                })
+        }
+    }, [type, bounds]);
 
     return (
         <>
             <CssBaseline />
-            <Header />
+            <Header setCoordinates={setCoordinates} />
             <Grid container spacing={3} style={{ width: '100%' }}>
                 {/* style içine obje aldığı için width'i böyle çift parantezle verdik */}
                 {/* xs=12 ile mobil cihazlarda full ekran görüntülenecek demiş olduk */}
