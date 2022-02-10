@@ -5,10 +5,8 @@ import PlaceDetails from '../PlaceDetails/PlaceDetails';
 
 import useStyles from './styles';
 
-const List = ({ places, childClicked, isLoading }) => {
+const List = ({ places, childClicked, isLoading, type, setType, rating, setRating }) => {
     const classes = useStyles();
-    const [type, setType] = useState('restaurants');
-    const [rating, setRating] = useState('');
     // type -> state, setType -> ilgili state'i modify eden function
     // useState('restaurants') içine restaurants geçerek initial(default değerini belirttik)
 
@@ -23,7 +21,7 @@ const List = ({ places, childClicked, isLoading }) => {
         // const refs = Array(places?.length).fill().map((_, i) => elRefs[i] || createRef());
 
         // setElRefs(refs);
-        setElRefs((refs) => Array(places.length).fill().map((_, i) => refs[i] || createRef()));
+        setElRefs((refs) => Array(places?.length).fill().map((_, i) => refs[i] || createRef()));
     }, [places]); //places her değiştiğinde bu use effect çalışsın diye [places] yaptık
 
 

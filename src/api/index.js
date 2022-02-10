@@ -2,13 +2,12 @@ import axios from "axios";
 //api calları için bu js'i oluşturduk
 // axios ile api call yapacağız
 
-const URL = 'https://travel-advisor.p.rapidapi.com/restaurants/list-in-boundary';
-
-export const getPlacesData = async (sw, ne) => {
+export const getPlacesData = async (type, sw, ne) => {
   try {
     // axios olduğundan metod get olur dedi ve yukarıdaki(artık aşağıdaki :)) parametrelerden get'i çıkardık
+    // ` şununla beraber stringi template stringe çevirdik ve type'ı içerisine parametrik olarak verebildik
 
-    const { data: { data } } = await axios.get(URL, {
+    const { data: { data } } = await axios.get(`https://travel-advisor.p.rapidapi.com/${type}/list-in-boundary`, {
       params: {
         bl_latitude: sw.lat,
         tr_latitude: ne.lat,
