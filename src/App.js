@@ -2,9 +2,8 @@
 //imrd import ReactDOM from 'react-dom';
 // imrs→	import React, { useState } from 'react'
 // imrse→	import React, { useState, useEffect } from 'react'
-//17. dakikada kaldım
-//37.58de kaldım
-//1:14:18 de kaldım
+// Kullanılan paketler
+// npm install @material-ui/core @material-ui/icons @material-ui/lab @react-google-maps/api axios google-map-react
 
 import React, { useState, useEffect } from 'react';
 import { CssBaseline, Grid } from '@material-ui/core'; //CssBaseline padding margin, bgcolor düzenleyip normale çekiyor
