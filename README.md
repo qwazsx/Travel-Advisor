@@ -1,11 +1,17 @@
 # Travel Advisor
 
-React</br>
-Firebase</br>
-Kullanıcıların google authentication ile giriş yapabilmesi, giriş yapan kullanıcının mesaj yollayabilmesi ve alabilmesi. İletilen mesajların anlık olarak kullanıcıya sunulabilmesini içeren basit bir mesajlaşma uygulaması örneği</br>
-Firebase kullanmayı ve google authentication denemek için boş vakitlerimle kurcaladığım bir proje</br>
+Geolocation</br> 
+Google Maps API & Google Places API</br> 
+Fetching API data based on the location</br> 
+Data filtering</br>
 
-Firebase üzerine deploy edilecek ancak çalışma ortamım elverişli olmadığı için deploy edilip dışarıdan çağırılabilir hale gelmedi
+React</br>
+Material UI</br>
+Google Location API</br>
+Rapid API üzerinden Travel Advisor API kullanarak restoran/otel ve aktivite verileri çekerek puanlamalarının ve haritadaki konumlarının gösterilmesini içeren bir proje </br>
+Aşağıdaki linkten projenin deploy edilmiş haline ulaşabilirsiniz </br>
+https://mfc-travel-app.netlify.app/
+
 
 Referans olarak aşağıdaki linkteki youtube videosu takip edilmiştir.</br>
-https://www.youtube.com/watch?v=zQyrwxMPm88&ab_channel=Fireship</br>
+https://www.youtube.com/watch?v=UKdQjQX1Pko&t=2s&ab_channel=JavaScriptMastery
