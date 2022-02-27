@@ -9,7 +9,7 @@ Data filtering</br>
 React</br>
 Material UI</br>
 Google Location API</br>
-Rapid API üzerinden Travel Advisor API kullanarak restoran/otel ve ektivite verileri çekerek puanlamalarının ve haritadaki konumlarının gösterilmesini içeren bir proje </br>
+Rapid API üzerinden Travel Advisor API kullanarak restoran/otel ve aktivite verileri çekerek puanlamalarının ve haritadaki konumlarının gösterilmesini içeren bir proje </br>
 Aşağıdaki linkten projenin deploy edilmiş haline ulaşabilirsiniz </br>
 https://mfc-travel-app.netlify.app/
 
